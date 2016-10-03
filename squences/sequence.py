@@ -34,11 +34,11 @@ def alt_harmonic(n):
     return (-1) ** (n + 1) / n
 
 
-def multiples(x):
+def powers(x):
     return lambda n: x ** n
 
 
-def increments(x):
+def multiples(x):
     return lambda n: x * n
 
 
@@ -57,11 +57,15 @@ if __name__ == '__main__':
 
     print('log 2 =', sum(sequence(alt_harmonic)(100)))
 
-    eights = multiples(8)
+    eights = powers(8)
 
     print(sequence(eights)(6))
 
-    threes = increments(3)
+    threes = multiples(3)
 
     print(sequence(threes)(6))
+
+    sevens = multiples(8)
+
+    print(sequence(sevens)(10))
 
